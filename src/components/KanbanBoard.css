@@ -1,0 +1,171 @@
+.board-content {
+    flex: 1 1 auto;
+    overflow-y: hidden;
+    position: relative;
+    display: flex;
+    word-wrap: break-word;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.board-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    margin: 8px;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.board-column-title {
+    text-align: left;
+    padding: 0 8px;
+    font-size: 24px;
+}
+
+.board-column-title:read-write:focus {
+    outline: none;
+}
+
+.board-column-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    position: relative;
+    padding: 4px 8px;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.board-column {
+    min-width: max(200px, calc(25% - 20px));
+    width: calc(25% - 20px);
+    margin: 8px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.board-column:hover {
+    border: 2px solid gray;
+}
+
+.card-title {
+    border-radius: 5px 5px 0 0;
+    background-color: gray;
+    padding: 4px;
+    color: white;
+    margin: 0;
+    display: flex;
+    height: 24px;
+    overflow: hidden;
+    min-height: 24px;
+}
+
+.card-title div {
+    max-width: 70%;
+    overflow: hidden;
+}
+
+.card-title .dlt-btn {
+    margin-left: auto;
+    cursor: pointer;
+    padding: auto;
+    width: 20px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.dlt-btn:hover {
+    color: red;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    min-height: 100px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card-content {
+    flex-grow: 1;
+    padding: 12px;
+    max-height: 250px;
+    overflow: auto;
+}
+
+.card:hover {
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2);
+}
+
+.add-btn {
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: auto;
+    margin:auto;
+    font-size: 32px;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    border: 2px solid gray;
+    color: gray;
+    font-size: 40px;
+    line-height: 30px;
+}
+
+.function-card {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+.dragover {
+    border: 2px dashed palevioletred;
+}
+
+.card.dragover {
+    border: none;
+}
+
+.card.dragover .card-title {
+    background-color: palevioletred;
+}
+
+@media only screen and (max-width: 1024px) {
+    .board-column {
+        min-width: max(200px, calc(100% / 3 - 20px));
+        width: calc(100% / 3 - 20px);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .board-column {
+        min-width: max(200px, calc(50% - 20px));
+        width: calc(50% - 20px);
+        height: 50%;
+        margin: 8px;
+    }
+
+    .board-content {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+    }
+}
+
