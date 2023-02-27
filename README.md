@@ -4,6 +4,8 @@ Create a Kanban board with drag-and-drop functionality using React. The board sh
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+App demo: https://shang8024.github.io/Kanban-Board/
+
 ## Available Scripts
 
 In the project directory, you can run:
